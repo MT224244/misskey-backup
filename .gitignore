@@ -1,0 +1,4 @@
+.env
+backups
+crontab
+docker-compose.yml
