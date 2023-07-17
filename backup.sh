@@ -1,6 +1,6 @@
 #!/bin/sh
 
-BACKUP_FILE="/backups/${POSTGRES_DB}_$(TZ='Asia/Tokyo' date +%Y%m%d%H%M).sql"
+BACKUP_FILE="/backups/${POSTGRES_DB}_$(TZ='Asia/Tokyo' date +%Y%m%d%H).sql"
 COMPRESSED="${BACKUP_FILE}.7z"
 
 pg_dump -h $POSTGRES_HOST -U $POSTGRES_USER -d $POSTGRES_DB > $BACKUP_FILE 2>> /var/log/cron.log
