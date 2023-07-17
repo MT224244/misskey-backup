@@ -12,6 +12,9 @@ COPY rclone.conf /root/.config/rclone/
 COPY backup.sh /root/
 RUN chmod +x /root/backup.sh
 
+COPY get.sh /
+RUN chmod +x /get.sh
+
 COPY crontab /var/spool/cron/crontabs/root
 RUN chmod 0644 /var/spool/cron/crontabs/root
 
